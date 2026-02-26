@@ -23,11 +23,12 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: paper/main.tex
-          working_directory: .
+          root_file: main.tex
+          working_directory: paper
 
       - name: Copy PDF to site
         run: |
+          ls -la paper/
           mkdir -p site/paper
           cp paper/main.pdf site/paper/hopf-hydrogen.pdf
 
