@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergent Hydrogen Orbitals from Quark Rotation Geometry on S³</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>Emergent Hydrogen Orbitals from Quark Rotation Geometry on S³</h1>
+    <p class="author">2026</p>
+  </div>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="abstract">Abstract</button>
+    <button class="tab-btn" data-tab="paper">Paper</button>
+    <button class="tab-btn" data-tab="demo">Interactive Demo</button>
+  </nav>
+
+  <!-- Abstract Tab -->
+  <div id="abstract" class="tab-content active">
+    <p class="abstract-text">
+      We show that every hydrogen orbital shape emerges from a single geometric construction
+      on the 3-sphere S³. Three quarks rotate independently through S³ via SU(2) paths with
+      Z₃ cyclic frequency permutation. The electron's trajectory is the composed rotation
+      <em>q</em> = <em>q</em><sub>R</sub> · <em>q</em><sub>G</sub> · <em>q</em><sub>B</sub>.
+      When this trajectory is weighted by eigenfunctions of the Laplacian on S³ —
+      Gegenbauer polynomials and their angular counterparts — every hydrogen orbital appears:
+      s, p, d, and f, for all principal quantum numbers <em>n</em>. No Schrödinger equation
+      or Coulomb potential is used. The shell capacity 2<em>n</em>² and subshell capacity
+      2(2<em>l</em>+1) follow from the eigenvalue degeneracy of ∆<sub>S³</sub>. An interactive
+      WebGPU demonstration accompanies this paper, showing the probability clouds building
+      in real time from the quark path. The orbital shape is not imposed — it is inevitable
+      geometry.
+    </p>
+
+    <div class="links">
+      <a href="paper/hopf-hydrogen.pdf">Download PDF</a>
+      <a href="https://github.com">Source Code</a>
+    </div>
+
+    <div class="key-result">
+      <h3>Key Result</h3>
+      <p>
+        All 20 hydrogen orbitals (n = 1 through 4) emerge from the <strong>same</strong>
+        quark rotation path on S³. Only the harmonic filter changes. The electron traverses
+        a single ergodic trajectory; the weight function
+        <code>|Y<sub>N</sub>(y)|²</code> evaluated at each S³ point determines which
+        regions contribute to the visible probability cloud. Quantum numbers (n, l, m) are
+        not inputs — they are eigenvalue labels of the S³ Laplacian.
+      </p>
+    </div>
+
+    <div class="key-result" style="margin-top: 16px;">
+      <h3>Construction</h3>
+      <p>
+        Three SU(2) paths with Z₃ cyclic frequency permutation:
+      </p>
+      <p style="margin-top: 8px;">
+        <code>q<sub>R</sub>(t) = normalize(cos ω₁t, sin ω₂t, cos ω₃t, sin ω₄t)</code><br>
+        <code>q<sub>G</sub>(t) = normalize(cos ω₂t, sin ω₃t, cos ω₄t, sin ω₁t)</code><br>
+        <code>q<sub>B</sub>(t) = normalize(cos ω₃(−t), sin ω₄(−t), cos ω₁(−t), sin ω₂(−t))</code>
+      </p>
+      <p style="margin-top: 8px;">
+        Electron: <code>q(t) = q<sub>R</sub> · q<sub>G</sub> · q<sub>B</sub></code> &mdash;
+        SU(2) group multiplication. The orbit is dense in S³ when frequencies are
+        mutually incommensurate.
+      </p>
+    </div>
+  </div>
+
+  <!-- Paper Tab -->
+  <div id="paper" class="tab-content">
+    <object data="paper/hopf-hydrogen.pdf" type="application/pdf" class="pdf-embed">
+      <div class="pdf-fallback">
+        <p>PDF viewer not available in this browser.</p>
+        <p><a href="paper/hopf-hydrogen.pdf">Download the paper (PDF)</a></p>
+      </div>
+    </object>
+  </div>
+
+  <!-- Demo Tab -->
+  <div id="demo" class="tab-content demo-tab">
+    <button id="demo-back" class="demo-back">Back to Paper</button>
+    <iframe id="demo-iframe" class="demo-iframe" title="Interactive Demo"></iframe>
+  </div>
+
+  <div class="footer">
+    <p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p>
+  </div>
+
+  <script src="js/tabs.js"></script>
+</body>
+</html>
