@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emergent Hydrogen Orbitals from Quark Rotation Geometry on S³</title>
+  <title>Hydrogen Orbital Structure from Harmonic Analysis on S³</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <div class="header">
-    <h1>Emergent Hydrogen Orbitals from Quark Rotation Geometry on S³</h1>
+    <h1>Hydrogen Orbital Structure from Harmonic Analysis on S³</h1>
     <p class="author">2026</p>
   </div>
 
@@ -22,18 +22,21 @@
   <!-- Abstract Tab -->
   <div id="abstract" class="tab-content active">
     <p class="abstract-text">
-      We show that every hydrogen orbital shape emerges from a single geometric construction
-      on the 3-sphere S³. Three quarks rotate independently through S³ via SU(2) paths with
-      Z₃ cyclic frequency permutation. The electron's trajectory is the composed rotation
-      <em>q</em> = <em>q</em><sub>R</sub> · <em>q</em><sub>G</sub> · <em>q</em><sub>B</sub>.
-      When this trajectory is weighted by eigenfunctions of the Laplacian on S³ —
-      Gegenbauer polynomials and their angular counterparts — every hydrogen orbital appears:
-      s, p, d, and f, for all principal quantum numbers <em>n</em>. No Schrödinger equation
-      or Coulomb potential is used. The shell capacity 2<em>n</em>² and subshell capacity
-      2(2<em>l</em>+1) follow from the eigenvalue degeneracy of ∆<sub>S³</sub>. An interactive
-      WebGPU demonstration accompanies this paper, showing the probability clouds building
-      in real time from the quark path. The orbital shape is not imposed — it is inevitable
-      geometry.
+      We show that every hydrogen orbital shape emerges from harmonic analysis on the
+      3-sphere S³. An ergodic trajectory on S³ (generated here by composing three SU(2)
+      rotations with Z₃ cyclic symmetry) is weighted by eigenfunctions of the Laplacian
+      ∆<sub>S³</sub>. Each eigenfunction selects a different orbital: s, p, d, and f, for
+      all principal quantum numbers <em>n</em>. No Schrödinger equation or Coulomb potential
+      is used. Three results go beyond Fock's 1935 momentum-space correspondence:
+      (i) the shell capacity 2<em>n</em>² follows from the eigenspace dimension
+      (<em>k</em>+1)² at Laplacian degree <em>k</em> = <em>n</em>−1;
+      (ii) the Aufbau energy ordering follows from the strictly increasing eigenvalue
+      sequence −<em>k</em>(<em>k</em>+2): 0, 3, 8, 15, …;
+      (iii) the radial wavefunctions are Gegenbauer polynomials on the compact interval
+      [0, π], rather than Laguerre polynomials on [0, ∞) — both give <em>n</em>−<em>l</em>−1
+      radial nodes, but the node positions differ due to S³ compactification, yielding a
+      falsifiable prediction. An interactive WebGPU demonstration accompanies this paper.
+      The orbital shape is not imposed — it is inevitable geometry.
     </p>
 
     <div class="links">
